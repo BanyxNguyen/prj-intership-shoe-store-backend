@@ -1,0 +1,118 @@
+﻿@page
+@model prjShoeStore.Areas.Admin.Pages.ImportVoucherPage.DetailsModel
+
+@{
+    Layout = "Templates/_LayoutIndex";
+    ViewData["Title"] = "Details";
+    ViewData["TableId"] = "ImportVoucher";
+}
+@section Links{
+    <!-- Select2 -->
+    <link rel="stylesheet" href="/Admin/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="/Admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <style>
+        span.select2-selection.select2-selection--single {
+            height: 100% !important;
+        }
+        .error-validate {
+            border: 2px solid red;
+        }
+
+    </style>
+}
+@section HeaderLayout{
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>ImportVoucher</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-page="/DashBoardPage/Index">Home</a></li>
+                    <li class="breadcrumb-item active">ImportVoucher</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+}
+
+@section TableTitle{
+    <div class="d-flex justify-content-end">
+        <a asp-page="./Index">Back to List</a>
+    </div>
+}
+
+<div>
+    <h4>PhieuNhap</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PhieuNhap.NgayLap)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PhieuNhap.NgayLap)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PhieuNhap.NhanVien.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PhieuNhap.NhanVien.Email)
+        </dd>
+    </dl>
+</div>
+<div class="row mb-2">
+    <div class="col-md-2">
+        <label>SanPham</label>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <select id="select-sp" class="form-control select2-sp" style="width: 100%;"></select>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <label>Kich Thuoc</label>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <select id="select-kt" class="form-control select2-kt" style="width: 100%;"></select>
+        </div>
+    </div>
+    <div class="col-md-2"><button id="btn-add" class="btn btn-success">Add</button></div>
+</div>
+<hr />
+
+<form method="post" id="id-ctpn">
+</form>
+
+<div class="row mb-2">
+    <div class="col-md-2"><button id="btn-submit" class="btn btn-success">Create</button></div>
+</div>
+<table class="table table-bordered table-striped" id="CTPNTable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Ten SP</th>
+            <th>Kich Thuoc</th>
+            <th>So Luong</th>
+            <th>Gia</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+@section Scripts{
+    <script src="/Admin/js/ctpn-create.js" type="module"></script>
+    <!-- Select2 -->
+    <script src="/Admin/plugins/select2/js/select2.full.min.js"></script>
+    <script type="module">
+        import CTPNCreate from '/Admin/js/ctpn-create.js'
+        console.log(CTPNCreate)
+        const process = new CTPNCreate({
+            TableSelector: "CTPNTable",
+            data: "@(Newtonsoft.Json.JsonConvert.SerializeObject(Model.CTPNs))",
+            Products: "@(Newtonsoft.Json.JsonConvert.SerializeObject(Model.SanPhams))",
+            Errors:"@(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.error?? new List<ValiateError>()))"
+        });
+        process.Render();
+    </script>
+}

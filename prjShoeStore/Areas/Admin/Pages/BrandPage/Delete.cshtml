@@ -1,0 +1,62 @@
+﻿@page
+@model prjShoeStore.Areas.Admin.Pages.BrandPage.DeleteModel
+
+@{
+    Layout = "Templates/_LayoutForm";
+    ViewData["Title"] = "Delete";
+}
+@section HeaderLayout{
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Brand</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-page="/BrandPage/Index">Brand</a></li>
+                    <li class="breadcrumb-item active">Delete</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Are you sure you want to delete this?</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div>
+                        <dl class="row">
+                            <dt class="col-sm-2">
+                                @Html.DisplayNameFor(model => model.ThuongHieu.Ten)
+                            </dt>
+                            <dd class="col-sm-10">
+                                @Html.DisplayFor(model => model.ThuongHieu.Ten)
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                    <form method="post">
+                        <input type="hidden" asp-for="ThuongHieu.Id" />
+                        <input type="submit" value="Delete" class="btn btn-danger" /> |
+                        <a asp-page="./Index">Back to List</a>
+                    </form>
+                </div>
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+    <!-- /.row -->
+</div><!-- /.container-fluid -->

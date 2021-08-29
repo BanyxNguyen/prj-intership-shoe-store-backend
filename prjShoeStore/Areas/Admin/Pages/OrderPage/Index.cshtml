@@ -1,0 +1,87 @@
+﻿@page
+@model prjShoeStore.Areas.Admin.Pages.OrderPage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "Templates/_LayoutIndex";
+    ViewData["TableId"] = "Order";
+}
+
+@section HeaderLayout{
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Order</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-page="/DashBoardPage/Index">Home</a></li>
+                    <li class="breadcrumb-item active">Order</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+}
+
+<table class="table table-bordered table-striped" id="@ViewBag.TableId">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].TenNguoiNhan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].DiaChiNguoiNhan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].NgayLap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].SoDienThoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].IdNVGiaoHang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].TrangThai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].KhachHang)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.DonDatHang)
+        {
+            <tr>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChiNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayLap)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoDienThoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NVGiaoHang.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrangThai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KhachHang.Email)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

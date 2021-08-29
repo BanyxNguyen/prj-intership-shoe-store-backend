@@ -1,0 +1,53 @@
+﻿@page
+@model prjShoeStore.Areas.Admin.Pages.ProductPage.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "Templates/_LayoutIndex";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SanPham</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SanPham.Ten)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SanPham.Ten)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SanPham.MoTa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SanPham.MoTa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SanPham.HinhAnh)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SanPham.HinhAnh)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SanPham.Mau)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SanPham.Mau)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SanPham.LoaiSP)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SanPham.LoaiSP.Id)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="SanPham.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,105 @@
+﻿@page
+@model prjShoeStore.Areas.Admin.Pages.ProductPage.CreateModel
+
+@{
+    Layout = "Templates/_LayoutForm";
+    ViewData["Title"] = "Create";
+}
+@section Links{
+    <link href="/Admin/css/form-product.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="/Admin/js/form-product.js"></script>
+}
+@section HeaderLayout{
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Product</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-page="/ProductPage/Index">Product</a></li>
+                    <li class="breadcrumb-item active">Create</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Create</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form method="post" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="SanPham.Ten" class="control-label"></label>
+                                    <input asp-for="SanPham.Ten" class="form-control" />
+                                    <span asp-validation-for="SanPham.Ten" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="SanPham.MoTa" class="control-label"></label>
+                                    <input asp-for="SanPham.MoTa" class="form-control" />
+                                    <span asp-validation-for="SanPham.MoTa" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="SanPham.Mau" class="control-label"></label>
+                                    <input asp-for="SanPham.Mau" class="form-control" />
+                                    <span asp-validation-for="SanPham.Mau" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="SanPham.IdLoaiSP" class="control-label"></label>
+                                    <select asp-for="SanPham.IdLoaiSP" class="form-control" asp-items="ViewBag.IdLoaiSP"></select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="wrap-container">
+                                    <label asp-for="SanPham.HinhAnh" class="control-label"></label>
+                                    <span asp-validation-for="Images" class="text-danger"></span>
+                                    <input id="imagePost" multiple asp-for="Images" hidden />
+                                    <input id="imageOriginal" asp-for="SanPham.HinhAnh" hidden/>
+                                    <div class="container-images">
+                                        <div class="wrap-grid-img">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input multiple type="file" class="custom-file-input" id="input-image">
+                                                <label class="custom-file-label" for="Images">Choose file</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                        <a asp-page="Index">Back to List</a>
+                    </div>
+                </form>
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+    <!-- /.row -->
+</div><!-- /.container-fluid -->

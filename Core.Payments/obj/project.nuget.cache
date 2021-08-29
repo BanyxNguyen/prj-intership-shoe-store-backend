@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "BBOpQyeUKgUhiLUSTbbmmxhFqb2msi9jANpZD5YzKxj+prOvOZgvR03ht+SF8UsTx4XFwths2Es+zUfFcFKLmQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\Core.Payments\\Core.Payments.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\devil\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\devil\\.nuget\\packages\\microsoft.extensions.options\\3.1.10\\microsoft.extensions.options.3.1.10.nupkg.sha512",
+    "C:\\Users\\devil\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.10\\microsoft.extensions.primitives.3.1.10.nupkg.sha512",
+    "C:\\Users\\devil\\.nuget\\packages\\paypalcheckoutsdk\\1.0.3\\paypalcheckoutsdk.1.0.3.nupkg.sha512",
+    "C:\\Users\\devil\\.nuget\\packages\\paypalhttp\\1.0.0\\paypalhttp.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

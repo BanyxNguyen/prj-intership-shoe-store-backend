@@ -1,0 +1,76 @@
+﻿@page
+@model prjShoeStore.Areas.Admin.Pages.ProductPage.IndexModel
+
+@{
+    Layout = "Templates/_LayoutIndex";
+    ViewData["Title"] = "Index";
+    ViewData["TableId"] = "Product";
+}
+@section HeaderLayout{
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Product</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-page="/DashBoardPage/Index">Home</a></li>
+                    <li class="breadcrumb-item active">Product</li>
+                </ol>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+}
+@section TableTitle{
+    <div class="d-flex justify-content-end">
+        <a asp-page="Create">Create New</a>
+    </div>
+}
+<table class="table table table-bordered table-striped" id="@ViewBag.TableId">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>
+                @Html.DisplayNameFor(model => model.SanPham[0].HinhAnh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SanPham[0].Ten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SanPham[0].MoTa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SanPham[0].Mau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SanPham[0].LoaiSP)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.SanPham)
+        {
+            <tr>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                <td>
+                    <img class="product-img" width="60" height="45" id="image" src="@item.HinhAnh" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ten)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoTa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoaiSP.Ten)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

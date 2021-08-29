@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "prjShoeStore", "prjShoeStore\prjShoeStore.csproj", "{8915E249-1563-43EF-8E4A-36471042385E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Payments", "Core.Payments\Core.Payments.csproj", "{DDD9087B-AB86-46B0-AD6E-B2ABD361DFCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8915E249-1563-43EF-8E4A-36471042385E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8915E249-1563-43EF-8E4A-36471042385E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8915E249-1563-43EF-8E4A-36471042385E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8915E249-1563-43EF-8E4A-36471042385E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD9087B-AB86-46B0-AD6E-B2ABD361DFCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD9087B-AB86-46B0-AD6E-B2ABD361DFCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD9087B-AB86-46B0-AD6E-B2ABD361DFCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD9087B-AB86-46B0-AD6E-B2ABD361DFCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22516AFF-2F6E-4CDA-9714-CADFEC59BCAF}
+	EndGlobalSection
+EndGlobal

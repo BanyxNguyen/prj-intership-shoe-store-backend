@@ -1,0 +1,9 @@
+H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\bin\Release\netcoreapp3.1\Core.Payments.deps.json
+H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\bin\Release\netcoreapp3.1\Core.Payments.dll
+H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\bin\Release\netcoreapp3.1\Core.Payments.pdb
+H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\obj\Release\netcoreapp3.1\Core.Payments.csprojAssemblyReference.cache
+H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\obj\Release\netcoreapp3.1\Core.Payments.AssemblyInfoInputs.cache
+H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\obj\Release\netcoreapp3.1\Core.Payments.AssemblyInfo.cs
+H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\obj\Release\netcoreapp3.1\Core.Payments.csproj.CoreCompileInputs.cache
+H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\obj\Release\netcoreapp3.1\Core.Payments.dll
+H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\obj\Release\netcoreapp3.1\Core.Payments.pdb
