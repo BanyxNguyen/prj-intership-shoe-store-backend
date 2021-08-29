@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using prjShoeStore.ConfigExtentions;
+using prjShoeStore.Respositories.Infractures;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,6 +29,7 @@ namespace prjShoeStore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRepository();
             services.AddJwtAuthentication(Configuration);
             services.AddPayPal(option =>
             {

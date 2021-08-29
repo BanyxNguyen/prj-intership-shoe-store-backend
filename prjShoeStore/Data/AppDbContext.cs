@@ -98,7 +98,7 @@ namespace prjShoeStore.Data
 
             builder.Entity<CTDDH>()
                 .HasOne(x => x.DonDatHang)
-                .WithMany()
+                .WithMany(x=>x.CTDDHs)
                 .HasForeignKey(x => x.IdDonDatHang);
 
             builder.Entity<CTDDH>()
@@ -132,6 +132,10 @@ namespace prjShoeStore.Data
             builder.Entity<HoaDon>()
                 .HasKey(x => x.IdDonDatHang)
                 .IsClustered();
+            builder.Entity<DonDatHang>()
+             .Property(x => x.PaymentType)
+             .HasConversion(x => x.ToString(), x => (EPaymentType)Enum.Parse(typeof(EPaymentType), x));
+
             builder.Entity<DonDatHang>()
              .Property(x => x.TrangThai)
              .HasConversion(x => x.ToString(), x => (TrangThaiDonHang)Enum.Parse(typeof(TrangThaiDonHang), x));

@@ -158,6 +158,9 @@ namespace prjShoeStore.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("Birthday")
                         .HasColumnType("datetime2");
 
@@ -354,6 +357,13 @@ namespace prjShoeStore.Migrations
 
                     b.Property<string>("NhanVienId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("PaymentId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SoDienThoai")
                         .HasColumnType("nvarchar(max)");
@@ -566,7 +576,7 @@ namespace prjShoeStore.Migrations
             modelBuilder.Entity("prjShoeStore.Data.Entities.CTDDH", b =>
                 {
                     b.HasOne("prjShoeStore.Data.Entities.DonDatHang", "DonDatHang")
-                        .WithMany()
+                        .WithMany("CTDDHs")
                         .HasForeignKey("IdDonDatHang")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -596,7 +606,7 @@ namespace prjShoeStore.Migrations
             modelBuilder.Entity("prjShoeStore.Data.Entities.CTPN", b =>
                 {
                     b.HasOne("prjShoeStore.Data.Entities.PhieuNhap", "PhieuNhap")
-                        .WithMany()
+                        .WithMany("CTPNs")
                         .HasForeignKey("IdPhieuNhap")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
