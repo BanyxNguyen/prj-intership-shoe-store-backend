@@ -33,8 +33,8 @@ namespace prjShoeStore
             services.AddJwtAuthentication(Configuration);
             services.AddPayPal(option =>
             {
-                option.ClientId = "ATNLfVOyt9fVCDBLJ85TQ1Zz6hg6_BVJKnBopNX-Vk98IGDOPasbNd-kMCM4QUPhvNsIj4S8dN98dIIp";
-                option.ClientSecret = "EDwBC_hDoBkup7JQ4GFUYshuo8EUsMGYCM4UXEZWWI4O3IwIrOFNPcQn1iYc1ISAElrWaWIGxJ3IuMEc";
+                option.ClientId = "AWTO4yApuMEFaiwvpojaDAZbCinT0fGo0VnaOrAoBwb9e2e_3ce13cIgc593rbmyjWc8RqO20qZzo6-s";
+                option.ClientSecret = "ENkbtcmphfnhPh_ZPyVBiLvtNrv5ENS65kkEtEuJkk3gajYDxps-uTJ8UWR0T5dLuZBfjcC-8KySdGIa";
             });
         }
 

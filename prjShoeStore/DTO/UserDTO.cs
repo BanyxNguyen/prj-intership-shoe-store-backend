@@ -24,7 +24,6 @@ namespace prjShoeStore.DTO
         [Required]
         public string LastName { get; set; }
         public DateTime Birthday { get; set; }
-        [Required]
         public EnumGender Gender { get; set; }
         public string Address { get; set; }
     }

@@ -25,7 +25,7 @@ namespace prjShoeStore.Respositories
                            by new { ctpn.IdSanPham, ctpn.KichThuoc, ctpn.IdPhieuNhap }
                            into gr
                            select new { gr.Key.IdPhieuNhap, gr.Key.IdSanPham, gr.Key.KichThuoc, NgayLap = gr.Max(x => x.NgayLap) });
-           
+
             var AmountImport = _Context.CTPNs.GroupBy(x => new { x.KichThuoc, x.IdSanPham }).Select(x => new
             {
                 x.Key.IdSanPham,
@@ -43,13 +43,14 @@ namespace prjShoeStore.Respositories
             var AmountQry = (from ai in AmountImport
                              join ae in AmountExport
                              on new { ai.IdSanPham, ai.KichThuoc } equals new { ae.IdSanPham, ae.KichThuoc }
+                             into details
+                             from d in details.DefaultIfEmpty()
                              select new
                              {
                                  ai.IdSanPham,
                                  ai.KichThuoc,
-                                 Amount = ae.Amount - ai.Amount
+                                 Amount = ai.Amount - (d == null ? 0 : d.Amount)
                              });
-
 
             return (from ctpn in _Context.CTPNs
                     join pn in _Context.PhieuNhaps on ctpn.IdPhieuNhap equals pn.Id

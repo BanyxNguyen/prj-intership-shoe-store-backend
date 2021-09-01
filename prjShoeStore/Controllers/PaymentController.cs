@@ -68,11 +68,11 @@ namespace prjShoeStore.Controllers
                             ItemTotal = new Money
                             {
                                 CurrencyCode = CurrencyHelper.USD,
-                                Value = lstTemp.Sum(x=>x.Gia).ToString()
+                                Value = lstTemp.Sum(x=>x.Gia*x.SoLuong).ToString()
                             },
                         },
                         CurrencyCode = CurrencyHelper.USD,
-                        Value = lstTemp.Sum(x => x.Gia).ToString()
+                        Value = lstTemp.Sum(x => x.Gia*x.SoLuong).ToString()
                     },
                 }
             };
@@ -81,8 +81,8 @@ namespace prjShoeStore.Controllers
             {
                 var response = await _PayPal.CreateOrder(PurchaseUnits, new ApplicationContext
                 {
-                    CancelUrl = $"{HttpContext.Request.Host}{Url.Action(nameof(PaymentController.PayPalCancel))}",
-                    ReturnUrl = $"{HttpContext.Request.Host}{Url.Action(nameof(PaymentController.PayPalReturn))}"
+                    //CancelUrl = $"{HttpContext.Request.Host}{Url.Action(nameof(PaymentController.PayPalCancel))}",
+                    //ReturnUrl = $"{HttpContext.Request.Host}{Url.Action(nameof(PaymentController.PayPalReturn))}"
                 });
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
                 {
@@ -90,7 +90,7 @@ namespace prjShoeStore.Controllers
                     return Ok(JObject.FromObject(order).ToString());
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
             }
             return BadRequest();

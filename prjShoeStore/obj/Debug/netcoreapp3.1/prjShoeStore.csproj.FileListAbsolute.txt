@@ -760,3 +760,4 @@ D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcorea
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\prjShoeStore.dll
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\prjShoeStore.pdb
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\prjShoeStore.genruntimeconfig.cache
+D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Pages\htmlPage\Index.cshtml.g.cs

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using prjShoeStore.Common;
 using prjShoeStore.Data;
@@ -25,7 +26,11 @@ namespace prjShoeStore.Areas.Admin.Pages.ProductPage
 
         public IActionResult OnGet()
         {
-            ViewData["IdLoaiSP"] = new SelectList(_context.LoaiSPs, nameof(LoaiSP.Id), nameof(LoaiSP.Ten));
+            ViewData["IdLoaiSP"] = new SelectList(_context.LoaiSPs.Include(x => x.ThuongHieu).Select(x => new
+            {
+                Id = x.Id,
+                Ten = x.Ten + " - " + x.ThuongHieu.Ten
+            }), nameof(LoaiSP.Id), nameof(LoaiSP.Ten));
             return Page();
         }
 

@@ -21,8 +21,9 @@ namespace prjShoeStore.Controllers
             _ProductRespository = productRespository;
         }
         [HttpPost]
-        public async Task<IActionResult> GetOrderProduct([FromForm] IList<CartDTO> CartList)
+        public async Task<IActionResult> GetOrderProduct([FromBody] IList<CartDTO> CartList)
         {
+            CartList = CartList.GroupBy(x => new { x.Size, x.Id }).Select(x => x.First()).ToList();
             await AttachProductsAsync(CartList);
             return Ok(CartList);
         }
@@ -38,7 +39,7 @@ namespace prjShoeStore.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateOrderAsync([FromForm] OrderDTO orderDTO)
+        public async Task<IActionResult> CreateOrderAsync([FromBody] OrderDTO orderDTO)
         {
             if (orderDTO == null || orderDTO.CartList == null || orderDTO.CartList.Count < 1)
             {
@@ -56,6 +57,7 @@ namespace prjShoeStore.Controllers
                 PaymentType = orderDTO.PaymentType,
                 SoDienThoai = orderDTO.SoDienThoai,
                 TenNguoiNhan = orderDTO.TenNguoiNhan,
+                TrangThai = orderDTO.PaymentType == EPaymentType.Prepay ? TrangThaiDonHang.None : TrangThaiDonHang.Pending,
                 CTDDHs = orderDTO.CartList.Select(x => new CTDDH
                 {
                     IdSanPham = x.Id,

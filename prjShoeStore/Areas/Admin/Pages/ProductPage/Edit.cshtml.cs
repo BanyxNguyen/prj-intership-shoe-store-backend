@@ -43,7 +43,11 @@ namespace prjShoeStore.Areas.Admin.Pages.ProductPage
             {
                 return NotFound();
             }
-            ViewData["IdLoaiSP"] = new SelectList(_context.LoaiSPs, nameof(LoaiSP.Id), nameof(LoaiSP.Ten));
+            ViewData["IdLoaiSP"] = new SelectList(_context.LoaiSPs.Include(x => x.ThuongHieu).Select(x => new
+            {
+                Id = x.Id,
+                Ten = x.Ten + " - " + x.ThuongHieu.Ten
+            }), nameof(LoaiSP.Id), nameof(LoaiSP.Ten));
             return Page();
         }
 

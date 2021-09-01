@@ -27,10 +27,21 @@ namespace prjShoeStore.Controllers
         [HttpPost]
         public async Task<ActionResult<IEnumerable<SanPhamDTO>>> GetSanPhams([FromBody] ModelFilter<SanPhamDTO> modelFilter)
         {
+
+            if (modelFilter == null)
+            {
+                ModelState.AddModelError(string.Empty, "ModelFilter is invalid!");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var builder = modelFilter.GetBuilder();
 
 
-            if(modelFilter.Page != null && modelFilter.Amount == null)
+            if (modelFilter.Page != null && modelFilter.Amount == null)
             {
                 ModelState.AddModelError(string.Empty, $"Amount field is requred when the Page field is assigned");
             }
@@ -68,7 +79,7 @@ namespace prjShoeStore.Controllers
 
             qrySanPham = builder.OrderBy(qrySanPham);
 
-            if(modelFilter.Page != null)
+            if (modelFilter.Page != null)
             {
                 qrySanPham = qrySanPham.Skip(modelFilter.Page.Value * modelFilter.Amount.Value).Take(modelFilter.Amount.Value);
             }
@@ -86,7 +97,7 @@ namespace prjShoeStore.Controllers
 
             foreach (var item in data)
             {
-                item.KichThuocs =await _context.CTPNs.Where(y => y.IdSanPham == item.Id).GroupBy(y => y.KichThuoc).Select(y => y.Key).ToListAsync();
+                item.KichThuocs = await _context.CTPNs.Where(y => y.IdSanPham == item.Id).GroupBy(y => y.KichThuoc).Select(y => y.Key).ToListAsync();
             }
 
             if (KTPropFilter != null)
