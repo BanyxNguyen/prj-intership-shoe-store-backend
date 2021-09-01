@@ -13,6 +13,7 @@ namespace prjShoeStore.Data.Entities
         //static Random Random = new Random();
         public Guid Id { get; set; }
         [Required]
+        [MaxLength(200)]
         public string Ten { get; set; }
         public string MoTa { get; set; }
         public string HinhAnh { get; set; }

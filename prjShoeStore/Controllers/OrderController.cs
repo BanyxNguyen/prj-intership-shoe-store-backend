@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using prjShoeStore.Areas.Identity.Data;
+using prjShoeStore.Attributes;
 using prjShoeStore.Data;
 using prjShoeStore.Data.Entities;
 using prjShoeStore.DTO;
@@ -15,12 +19,18 @@ namespace prjShoeStore.Controllers
     {
         private readonly AppDbContext _Context;
         private readonly IProductRespository _ProductRespository;
-        public OrderController(AppDbContext appDbContext, IProductRespository productRespository)
+        private readonly UserManager<ApplicationUser> _UserManager;
+        public OrderController(
+            AppDbContext appDbContext,
+            IProductRespository productRespository,
+            UserManager<ApplicationUser> userManager)
         {
             _Context = appDbContext;
             _ProductRespository = productRespository;
+            _UserManager = userManager;
         }
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> GetOrderProduct([FromBody] IList<CartDTO> CartList)
         {
             CartList = CartList.GroupBy(x => new { x.Size, x.Id }).Select(x => x.First()).ToList();
@@ -38,9 +48,34 @@ namespace prjShoeStore.Controllers
             }
         }
 
+        [HttpGet]
+        public async Task<IActionResult> ChangeStaus(Guid? OrderId, TrangThaiDonHang? Status)
+        {
+            if (OrderId == null || Status == null)
+            {
+                return NotFound();
+            }
+
+            try
+            {
+                var order = await _Context.DonDatHangs.FindAsync(OrderId);
+                order.TrangThai = Status.Value;
+                _Context.DonDatHangs.Update(order);
+                var ret = await _Context.SaveChangesAsync();
+                return Ok(ret > 0);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
+        [AuthorizeJWT]
         [HttpPost]
         public async Task<IActionResult> CreateOrderAsync([FromBody] OrderDTO orderDTO)
         {
+            var UserId = _UserManager.GetUserId(HttpContext.User);
+
             if (orderDTO == null || orderDTO.CartList == null || orderDTO.CartList.Count < 1)
             {
                 ModelState.AddModelError(string.Empty, "CartList is empty!");
@@ -50,6 +85,7 @@ namespace prjShoeStore.Controllers
             {
                 return BadRequest(ModelState);
             }
+
             var order = new DonDatHang()
             {
                 DiaChiNguoiNhan = orderDTO.DiaChiNguoiNhan,
@@ -57,6 +93,7 @@ namespace prjShoeStore.Controllers
                 PaymentType = orderDTO.PaymentType,
                 SoDienThoai = orderDTO.SoDienThoai,
                 TenNguoiNhan = orderDTO.TenNguoiNhan,
+                IdKHachHang = UserId,
                 TrangThai = orderDTO.PaymentType == EPaymentType.Prepay ? TrangThaiDonHang.None : TrangThaiDonHang.Pending,
                 CTDDHs = orderDTO.CartList.Select(x => new CTDDH
                 {

@@ -84,6 +84,7 @@ namespace prjShoeStore.Controllers
                     //CancelUrl = $"{HttpContext.Request.Host}{Url.Action(nameof(PaymentController.PayPalCancel))}",
                     //ReturnUrl = $"{HttpContext.Request.Host}{Url.Action(nameof(PaymentController.PayPalReturn))}"
                 });
+
                 if (response.StatusCode == System.Net.HttpStatusCode.Created)
                 {
                     var order = response.Result<Order>();
@@ -112,6 +113,7 @@ namespace prjShoeStore.Controllers
                 if (order != null)
                 {
                     order.TrangThai = Data.Entities.TrangThaiDonHang.Pending;
+                    order.PaymentId = ApprovedOrderId;
                     await _Context.SaveChangesAsync();
                 }
                 else

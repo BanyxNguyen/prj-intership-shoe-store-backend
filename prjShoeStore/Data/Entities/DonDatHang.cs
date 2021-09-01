@@ -9,7 +9,7 @@ namespace prjShoeStore.Data.Entities
 {
     public enum TrangThaiDonHang
     {
-        None, Pending, Dilivery, Cancel, Complete
+        None, Pending, Dilivery, Complete, Cancel
     }
     public enum EPaymentType
     {

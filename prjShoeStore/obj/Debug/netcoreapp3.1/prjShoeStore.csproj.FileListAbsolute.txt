@@ -683,10 +683,6 @@ D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcorea
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\ImportVoucherPage\Details.cshtml.g.cs
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\ImportVoucherPage\Edit.cshtml.g.cs
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\ImportVoucherPage\Index.cshtml.g.cs
-D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\OrderPage\Create.cshtml.g.cs
-D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\OrderPage\Delete.cshtml.g.cs
-D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\OrderPage\Details.cshtml.g.cs
-D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\OrderPage\Edit.cshtml.g.cs
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\OrderPage\Index.cshtml.g.cs
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\ProductCategoryPage\Create.cshtml.g.cs
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\ProductCategoryPage\Delete.cshtml.g.cs
@@ -761,3 +757,4 @@ D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcorea
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\prjShoeStore.pdb
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\prjShoeStore.genruntimeconfig.cache
 D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Pages\htmlPage\Index.cshtml.g.cs
+D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\OrderPage\Details.cshtml.g.cs

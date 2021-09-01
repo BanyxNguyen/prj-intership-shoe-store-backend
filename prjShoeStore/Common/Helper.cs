@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore.Internal;
+using prjShoeStore.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -32,6 +34,16 @@ namespace prjShoeStore.Common
                 item.CopyTo(file);
                 yield return "/" + url.Replace("\\", "/");
             }
+        }
+        public static IEnumerable<string> GetOrderStatus(this IHtmlHelper htmlHelper, TrangThaiDonHang status)
+        {
+            if (status == TrangThaiDonHang.Complete || status == TrangThaiDonHang.Cancel)
+            {
+                return null;
+            }
+            var enums = Enum.GetValues(typeof(TrangThaiDonHang)).Cast<TrangThaiDonHang>().ToList();
+            var index = enums.IndexOf(status);
+            return enums.Skip(index + 1).Select(x => x.ToString());
         }
     }
 }
