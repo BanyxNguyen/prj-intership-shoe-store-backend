@@ -11,6 +11,5 @@ namespace prjShoeStore.Controllers
 	[Route("api/[controller]/[action]")]
 	public class ApiBaseController : ControllerBase
 	{
-		
 	}
 }

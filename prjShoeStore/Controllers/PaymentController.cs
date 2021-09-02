@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using PayPalCheckoutSdk.Orders;
+using prjShoeStore.Attributes;
 using prjShoeStore.Data;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ using System.Threading.Tasks;
 
 namespace prjShoeStore.Controllers
 {
+    [AuthorizeJWT]
     public class PaymentController : ApiBaseController
     {
         private readonly IPayPalService _PayPal;

@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using prjShoeStore.Areas.Identity.Data;
 using prjShoeStore.Attributes;
+using prjShoeStore.AuthorizeHelper;
 using prjShoeStore.Common;
 using prjShoeStore.DTO;
 using prjShoeStore.Options;
@@ -69,7 +70,7 @@ namespace prjShoeStore.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateProfileAsync([FromForm] UserDTO userDTO)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
@@ -155,12 +156,17 @@ namespace prjShoeStore.Controllers
             var result = await _UserManager.CreateAsync(user, userDTO.PassWord);
             if (result.Succeeded)
             {
-                return Ok(await GenerateToken(user));
+                result = await _UserManager.AddToRoleAsync(user, AuthorizeManage.PolicyUser);
+                if (result.Succeeded)
+                {
+                    return Ok(await GenerateToken(user));
+                }
+                else
+                {
+                    await _UserManager.DeleteAsync(user);
+                }
             }
-            else
-            {
-                return BadRequest(result.Errors);
-            }
+            return BadRequest(result.Errors);
         }
     }
 }

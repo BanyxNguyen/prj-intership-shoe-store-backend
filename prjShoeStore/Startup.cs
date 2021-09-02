@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using prjShoeStore.AuthorizeHelper;
 using prjShoeStore.ConfigExtentions;
 using prjShoeStore.Respositories.Infractures;
 using System;
@@ -35,6 +36,15 @@ namespace prjShoeStore
             {
                 option.ClientId = "AWTO4yApuMEFaiwvpojaDAZbCinT0fGo0VnaOrAoBwb9e2e_3ce13cIgc593rbmyjWc8RqO20qZzo6-s";
                 option.ClientSecret = "ENkbtcmphfnhPh_ZPyVBiLvtNrv5ENS65kkEtEuJkk3gajYDxps-uTJ8UWR0T5dLuZBfjcC-8KySdGIa";
+            });
+            services.AddRazorPages(options =>
+            {
+                options.Conventions.AddAuthorizePageRazer();
+                options.Conventions.AddAreaPageRoute("Admin", "/DashBoardPage/Index", "Admin");
+            });
+            services.AddAuthorization(options =>
+            {
+                options.AddPoliciesApp();
             });
         }
 

@@ -151,8 +151,6 @@ namespace prjShoeStore.Data
                 .HasOne(x => x.NVGiaoHang)
                 .WithMany()
                 .HasForeignKey(x => x.IdNhanVien);
-
-
         }
     }
 }
