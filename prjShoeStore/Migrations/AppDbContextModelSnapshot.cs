@@ -320,16 +320,13 @@ namespace prjShoeStore.Migrations
                     b.Property<Guid>("IdDonDatHang")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("PhieuTraIdDonDatHang")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<int>("SoLuong")
                         .HasColumnType("int");
 
                     b.HasKey("IdCTDDH")
                         .HasAnnotation("SqlServer:Clustered", true);
 
-                    b.HasIndex("PhieuTraIdDonDatHang");
+                    b.HasIndex("IdDonDatHang");
 
                     b.ToTable("CTTraHangs");
                 });
@@ -341,13 +338,15 @@ namespace prjShoeStore.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("DiaChiNguoiNhan")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
 
                     b.Property<string>("IdKHachHang")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("IdNVGiaoHang")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)")
+                        .HasMaxLength(450);
 
                     b.Property<string>("IdNhanVien")
                         .HasColumnType("nvarchar(450)");
@@ -355,33 +354,35 @@ namespace prjShoeStore.Migrations
                     b.Property<DateTime>("NgayLap")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("NhanVienId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("PaymentId")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(256)")
+                        .HasMaxLength(256);
 
                     b.Property<string>("PaymentType")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(25)")
+                        .HasMaxLength(25);
 
                     b.Property<string>("SoDienThoai")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(25)")
+                        .HasMaxLength(25);
 
                     b.Property<string>("TenNguoiNhan")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<string>("TrangThai")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
                     b.HasIndex("IdKHachHang");
 
-                    b.HasIndex("IdNhanVien");
+                    b.HasIndex("IdNVGiaoHang");
 
-                    b.HasIndex("NhanVienId");
+                    b.HasIndex("IdNhanVien");
 
                     b.ToTable("DonDatHangs");
                 });
@@ -410,7 +411,8 @@ namespace prjShoeStore.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Ten")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
@@ -432,7 +434,8 @@ namespace prjShoeStore.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ten")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
@@ -476,7 +479,7 @@ namespace prjShoeStore.Migrations
                     b.HasKey("IdDonDatHang")
                         .HasAnnotation("SqlServer:Clustered", true);
 
-                    b.ToTable("phieuTras");
+                    b.ToTable("PhieuTras");
                 });
 
             modelBuilder.Entity("prjShoeStore.Data.Entities.SanPham", b =>
@@ -492,14 +495,16 @@ namespace prjShoeStore.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Mau")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
 
                     b.Property<string>("MoTa")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ten")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
@@ -515,7 +520,8 @@ namespace prjShoeStore.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ten")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("Id");
 
@@ -623,12 +629,14 @@ namespace prjShoeStore.Migrations
                     b.HasOne("prjShoeStore.Data.Entities.CTDDH", "CTDDH")
                         .WithMany()
                         .HasForeignKey("IdCTDDH")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("prjShoeStore.Data.Entities.PhieuTra", "PhieuTra")
                         .WithMany()
-                        .HasForeignKey("PhieuTraIdDonDatHang");
+                        .HasForeignKey("IdDonDatHang")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("prjShoeStore.Data.Entities.DonDatHang", b =>
@@ -639,11 +647,11 @@ namespace prjShoeStore.Migrations
 
                     b.HasOne("prjShoeStore.Areas.Identity.Data.ApplicationUser", "NVGiaoHang")
                         .WithMany()
-                        .HasForeignKey("IdNhanVien");
+                        .HasForeignKey("IdNVGiaoHang");
 
                     b.HasOne("prjShoeStore.Areas.Identity.Data.ApplicationUser", "NhanVien")
                         .WithMany()
-                        .HasForeignKey("NhanVienId");
+                        .HasForeignKey("IdNhanVien");
                 });
 
             modelBuilder.Entity("prjShoeStore.Data.Entities.HoaDon", b =>

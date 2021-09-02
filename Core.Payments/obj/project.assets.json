@@ -140,19 +140,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\UnmatchedTaiNguyen\\.nuget\\packages\\": {}
+    "C:\\Users\\devil\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj",
+      "projectUniqueName": "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\Core.Payments\\Core.Payments.csproj",
       "projectName": "Core.Payments",
-      "projectPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj",
-      "packagesPath": "C:\\Users\\UnmatchedTaiNguyen\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\obj\\",
+      "projectPath": "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\Core.Payments\\Core.Payments.csproj",
+      "packagesPath": "C:\\Users\\devil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\Core.Payments\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\UnmatchedTaiNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\devil\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -210,7 +210,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

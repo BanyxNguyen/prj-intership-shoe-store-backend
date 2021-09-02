@@ -7,15 +7,6 @@ H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\obj\Debug\netc
 H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.csproj.CoreCompileInputs.cache
 H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.dll
 H:\ProjectSources\ShowRoomVideoSource\ShowRoomVideo\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.pdb
-C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.deps.json
-C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.dll
-C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.pdb
-C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.csprojAssemblyReference.cache
-C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.AssemblyInfoInputs.cache
-C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.AssemblyInfo.cs
-C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.csproj.CoreCompileInputs.cache
-C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.dll
-C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.pdb
 D:\ProjectOrder\prj-intership-shoe-store-backend\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.deps.json
 D:\ProjectOrder\prj-intership-shoe-store-backend\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.dll
 D:\ProjectOrder\prj-intership-shoe-store-backend\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.pdb
@@ -25,3 +16,11 @@ D:\ProjectOrder\prj-intership-shoe-store-backend\Core.Payments\obj\Debug\netcore
 D:\ProjectOrder\prj-intership-shoe-store-backend\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.csproj.CoreCompileInputs.cache
 D:\ProjectOrder\prj-intership-shoe-store-backend\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.dll
 D:\ProjectOrder\prj-intership-shoe-store-backend\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.pdb
+C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.deps.json
+C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.dll
+C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.pdb
+C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.AssemblyInfoInputs.cache
+C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.AssemblyInfo.cs
+C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.csproj.CoreCompileInputs.cache
+C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.dll
+C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.pdb

@@ -24,7 +24,7 @@ namespace prjShoeStore.Data
         public DbSet<CTDDH> CTDDHs { get; set; }
         public DbSet<HoaDon> HoaDons { get; set; }
         public DbSet<DonDatHang> DonDatHangs { get; set; }
-        public DbSet<PhieuTra> phieuTras { get; set; }
+        public DbSet<PhieuTra> PhieuTras { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -106,13 +106,18 @@ namespace prjShoeStore.Data
                 .IsUnique();
 
             builder.Entity<CTTraHang>()
-                .HasKey(x => x.IdCTDDH)
+                .HasKey(x => x.IdCTDDH )
                 .IsClustered();
-
             builder.Entity<CTTraHang>()
                 .HasOne(x => x.CTDDH)
                 .WithMany()
-                .HasForeignKey(x => x.IdCTDDH);
+                .HasForeignKey(x => x.IdCTDDH)
+                .OnDelete(DeleteBehavior.NoAction);
+            builder.Entity<CTTraHang>()
+                .HasOne(x => x.PhieuTra)
+                .WithMany()
+                .HasForeignKey(x => x.IdDonDatHang)
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.Entity<KhuyenMai>()
                 .HasOne(x => x.KhachHang)
@@ -150,7 +155,9 @@ namespace prjShoeStore.Data
             builder.Entity<DonDatHang>()
                 .HasOne(x => x.NVGiaoHang)
                 .WithMany()
-                .HasForeignKey(x => x.IdNhanVien);
+                .HasForeignKey(x => x.IdNVGiaoHang);
+
+
         }
     }
 }

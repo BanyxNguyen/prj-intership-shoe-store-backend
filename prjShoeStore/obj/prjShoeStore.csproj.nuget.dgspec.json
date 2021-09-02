@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\prjShoeStore\\prjShoeStore.csproj": {}
+    "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\prjShoeStore\\prjShoeStore.csproj": {}
   },
   "projects": {
-    "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj": {
+    "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\Core.Payments\\Core.Payments.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj",
+        "projectUniqueName": "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\Core.Payments\\Core.Payments.csproj",
         "projectName": "Core.Payments",
-        "projectPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj",
-        "packagesPath": "C:\\Users\\UnmatchedTaiNguyen\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\obj\\",
+        "projectPath": "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\Core.Payments\\Core.Payments.csproj",
+        "packagesPath": "C:\\Users\\devil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\Core.Payments\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UnmatchedTaiNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\devil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,21 +72,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\prjShoeStore\\prjShoeStore.csproj": {
+    "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\prjShoeStore\\prjShoeStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\prjShoeStore\\prjShoeStore.csproj",
+        "projectUniqueName": "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\prjShoeStore\\prjShoeStore.csproj",
         "projectName": "prjShoeStore",
-        "projectPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\prjShoeStore\\prjShoeStore.csproj",
-        "packagesPath": "C:\\Users\\UnmatchedTaiNguyen\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\prjShoeStore\\obj\\",
+        "projectPath": "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\prjShoeStore\\prjShoeStore.csproj",
+        "packagesPath": "C:\\Users\\devil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\prjShoeStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UnmatchedTaiNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\devil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,8 +100,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj": {
-                "projectPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj"
+              "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\Core.Payments\\Core.Payments.csproj": {
+                "projectPath": "C:\\Users\\devil\\Desktop\\intership\\prjShoeStore\\Core.Payments\\Core.Payments.csproj"
               }
             }
           }
@@ -142,10 +142,6 @@
               "target": "Package",
               "version": "[3.1.15, )"
             },
-            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
-              "target": "Package",
-              "version": "[1.10.14, )"
-            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -173,7 +169,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

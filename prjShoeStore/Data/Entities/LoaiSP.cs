@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,6 +11,7 @@ namespace prjShoeStore.Data.Entities
 	public class LoaiSP
 	{
 		public Guid Id { get; set; }
+		[MaxLength(50)]
 		public string Ten { get; set; }
 		[DisplayName("ThuongHieu")]
 		public Guid IdThuongHieu { get; set; }

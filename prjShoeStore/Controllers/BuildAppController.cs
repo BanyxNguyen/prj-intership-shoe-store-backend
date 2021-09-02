@@ -34,7 +34,7 @@ namespace prjShoeStore.Controllers
             {
                 await _RoleManager.CreateAsync(new IdentityRole
                 {
-                    Name = AuthorizeManage.RoleAdmin
+                    Name = AuthorizeManage.RoleUser
                 });
             }
             return Ok(true);
@@ -49,26 +49,30 @@ namespace prjShoeStore.Controllers
         {
             var user = new ApplicationUser
             {
-                Email = userAdmin.Email
+                Email = userAdmin.Email,
+                UserName = userAdmin.Email
             };
             var usertmp = await _UserManager.FindByEmailAsync(user.Email);
-            if (user != null)
+            if (usertmp == null)
             {
                 var result = await _UserManager.CreateAsync(user, userAdmin.Password);
                 if (result.Succeeded)
                 {
-                    result = await _UserManager.AddToRoleAsync(user, AuthorizeManage.PolicyAdmin);
+                    usertmp = await _UserManager.FindByEmailAsync(userAdmin.Email);
+                    result = await _UserManager.AddToRoleAsync(usertmp, AuthorizeManage.RoleAdmin);
                     if (!result.Succeeded)
                     {
-                        await _UserManager.DeleteAsync(user);
+                        await _UserManager.DeleteAsync(user); 
+                        return BadRequest(result.Errors);
                     }
-                    else
-                    {
-                        return Ok(true);
-                    }
+
+                }
+                else
+                {
+                    return BadRequest(result.Errors);
                 }
             }
-            return BadRequest();
+            return Ok(true);
 
         }
     }
