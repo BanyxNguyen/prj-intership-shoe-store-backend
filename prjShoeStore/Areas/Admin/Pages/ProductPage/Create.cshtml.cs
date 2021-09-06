@@ -63,7 +63,7 @@ namespace prjShoeStore.Areas.Admin.Pages.ProductPage
             {
                 return Page();
             }
-
+            SanPham.NgayTao = DateTime.Now;
             _context.SanPhams.Add(SanPham);
             await _context.SaveChangesAsync();
 

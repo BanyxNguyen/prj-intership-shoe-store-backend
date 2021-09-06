@@ -501,6 +501,9 @@ namespace prjShoeStore.Migrations
                     b.Property<string>("MoTa")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("NgayTao")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Ten")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)")

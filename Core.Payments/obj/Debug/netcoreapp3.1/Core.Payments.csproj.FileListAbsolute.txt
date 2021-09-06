@@ -24,3 +24,13 @@ C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp
 C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.csproj.CoreCompileInputs.cache
 C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.dll
 C:\Users\devil\Desktop\intership\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.pdb
+F:\_school\tttn\prjShoeStore\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.deps.json
+F:\_school\tttn\prjShoeStore\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.dll
+F:\_school\tttn\prjShoeStore\Core.Payments\bin\Debug\netcoreapp3.1\Core.Payments.pdb
+F:\_school\tttn\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.csproj.AssemblyReference.cache
+F:\_school\tttn\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.GeneratedMSBuildEditorConfig.editorconfig
+F:\_school\tttn\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.AssemblyInfoInputs.cache
+F:\_school\tttn\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.AssemblyInfo.cs
+F:\_school\tttn\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.csproj.CoreCompileInputs.cache
+F:\_school\tttn\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.dll
+F:\_school\tttn\prjShoeStore\Core.Payments\obj\Debug\netcoreapp3.1\Core.Payments.pdb

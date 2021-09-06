@@ -19,6 +19,7 @@ namespace prjShoeStore.Data.Entities
         public string HinhAnh { get; set; }
         [MaxLength(100)]
         public string Mau { get; set; }
+        public DateTime NgayTao { get; set; }
         [DisplayName("LoaiSP")]
         public Guid IdLoaiSP { get; set; }
         //[NotMapped]

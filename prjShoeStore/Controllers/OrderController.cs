@@ -43,8 +43,11 @@ namespace prjShoeStore.Controllers
             foreach (var cart in CartList)
             {
                 var temp = await query.FirstOrDefaultAsync(x => x.Id == cart.Id && x.Size == cart.Size);
-                cart.Amount = temp.Amount;
-                cart.Price = temp.Price;
+                if(temp != null)
+                {
+                    cart.Amount = temp.Amount;
+                    cart.Price = temp.Price;
+                }
             }
         }
 

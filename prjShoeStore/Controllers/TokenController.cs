@@ -156,7 +156,7 @@ namespace prjShoeStore.Controllers
             var result = await _UserManager.CreateAsync(user, userDTO.PassWord);
             if (result.Succeeded)
             {
-                result = await _UserManager.AddToRoleAsync(user, AuthorizeManage.PolicyUser);
+                result = await _UserManager.AddToRoleAsync(user, AuthorizeManage.RoleUser);
                 if (result.Succeeded)
                 {
                     return Ok(await GenerateToken(user));
