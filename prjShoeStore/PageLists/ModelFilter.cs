@@ -192,7 +192,7 @@ namespace prjShoeStore.PageLists
             {
                 return !prop.IsExactly ? StringContainExpress(prop.FieldName, prop.Value) : StringExpress(prop.FieldName, prop.Value);
             }
-            else if (IsNumericType(PropInfo.PropertyType))
+            else 
             {
                 var Value = prop.Value.Trim();
                 var tmps = Value.Split(" ");
@@ -212,10 +212,10 @@ namespace prjShoeStore.PageLists
 
                 return ExpressOperator(PropExpr, valueExpr);
             }
-            else
-            {
-                throw new Exception("Does not support different numbers and strings!");
-            }
+            //else
+            //{
+            //    throw new Exception("Does not support different numbers and strings!");
+            //}
 
         }
 

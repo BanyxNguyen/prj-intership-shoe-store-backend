@@ -12,6 +12,7 @@ using prjShoeStore.ConfigExtentions;
 using prjShoeStore.Respositories.Infractures;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace prjShoeStore
     {
         public Startup(IConfiguration configuration)
         {
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
             Configuration = configuration;
         }
         public static string WWWROOTPATH { get; private set; }

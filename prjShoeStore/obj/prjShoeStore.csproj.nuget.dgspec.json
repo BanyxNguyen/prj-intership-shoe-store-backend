@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "F:\\_school\\tttn\\prjShoeStore\\prjShoeStore\\prjShoeStore.csproj": {}
+    "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\prjShoeStore\\prjShoeStore.csproj": {}
   },
   "projects": {
-    "F:\\_school\\tttn\\prjShoeStore\\Core.Payments\\Core.Payments.csproj": {
+    "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\_school\\tttn\\prjShoeStore\\Core.Payments\\Core.Payments.csproj",
+        "projectUniqueName": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj",
         "projectName": "Core.Payments",
-        "projectPath": "F:\\_school\\tttn\\prjShoeStore\\Core.Payments\\Core.Payments.csproj",
-        "packagesPath": "C:\\Users\\BenNguyen\\.nuget\\packages\\",
-        "outputPath": "F:\\_school\\tttn\\prjShoeStore\\Core.Payments\\obj\\",
+        "projectPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj",
+        "packagesPath": "C:\\Users\\UnmatchedTaiNguyen\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\BenNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\UnmatchedTaiNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -78,28 +72,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\_school\\tttn\\prjShoeStore\\prjShoeStore\\prjShoeStore.csproj": {
+    "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\prjShoeStore\\prjShoeStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\_school\\tttn\\prjShoeStore\\prjShoeStore\\prjShoeStore.csproj",
+        "projectUniqueName": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\prjShoeStore\\prjShoeStore.csproj",
         "projectName": "prjShoeStore",
-        "projectPath": "F:\\_school\\tttn\\prjShoeStore\\prjShoeStore\\prjShoeStore.csproj",
-        "packagesPath": "C:\\Users\\BenNguyen\\.nuget\\packages\\",
-        "outputPath": "F:\\_school\\tttn\\prjShoeStore\\prjShoeStore\\obj\\",
+        "projectPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\prjShoeStore\\prjShoeStore.csproj",
+        "packagesPath": "C:\\Users\\UnmatchedTaiNguyen\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\prjShoeStore\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\BenNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\UnmatchedTaiNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -112,8 +100,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "F:\\_school\\tttn\\prjShoeStore\\Core.Payments\\Core.Payments.csproj": {
-                "projectPath": "F:\\_school\\tttn\\prjShoeStore\\Core.Payments\\Core.Payments.csproj"
+              "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj": {
+                "projectPath": "D:\\ProjectOrder\\prj-intership-shoe-store-backend\\Core.Payments\\Core.Payments.csproj"
               }
             }
           }
@@ -154,6 +142,10 @@
               "target": "Package",
               "version": "[3.1.15, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.14, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -181,7 +173,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

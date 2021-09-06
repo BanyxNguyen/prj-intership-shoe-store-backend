@@ -1,0 +1,105 @@
+﻿@page
+@model prjShoeStore.Areas.Admin.Pages.OrderReportPage.IndexModel
+@{
+    ViewData["Title"] = "OrderReport";
+    Layout = "Templates/_LayoutIndex";
+    ViewData["TableId"] = "OrderReport";
+}
+
+@section HeaderLayout{
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>OrderReport</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a asp-page="/DashBoardPage/Index">Home</a></li>
+                    <li class="breadcrumb-item active">OrderReport</li>
+                </ol>
+            </div>
+        </div>
+        <form>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label asp-for="Start" class="control-label"></label>
+                        <input asp-for="Start" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label asp-for="End" class="control-label"></label>
+                        <input asp-for="End" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-success">Search</button>
+                </div>
+            </div>
+        </form>
+    </div><!-- /.container-fluid -->
+}
+
+<table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%" id="@ViewBag.TableId">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].NgayLap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].TenNguoiNhan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].DiaChiNguoiNhan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].SoDienThoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].PaymentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].PaymentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonDatHang[0].TongTien)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.DonDatHang)
+        {
+            <tr>
+                <td>
+                    @@
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayLap)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChiNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoDienThoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TongTien)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts{
+}

@@ -56,53 +56,53 @@
     <tbody>
         @foreach (var item in Model.DonDatHang)
         {
-        <tr>
-            <td>
-                <a class="btn btn-warning" asp-page="./Edit" asp-route-id="@item.Id" title="Merchandise return"><i class="fas fa-cookie-bite"></i></a>
-                <a class="btn btn-default" asp-page="./Details" asp-route-id="@item.Id" title="Details"><i class="fas fa-receipt"></i></a>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NgayLap)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenNguoiNhan)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiaChiNguoiNhan)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SoDienThoai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PaymentType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PaymentId)
-            </td>
-            <td>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="@item.Id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        @Html.DisplayFor(modelItem => item.TrangThai)
-                    </button>
-                    @{
-                        var temps = Html.GetOrderStatus(item.TrangThai);
-                        if (temps != null)
-                        {
-                            <div class="dropdown-menu" aria-labelledby="@item.Id">
-                                @foreach (var status in Html.GetOrderStatus(item.TrangThai))
-                                {
-                                    <a style="width:100px" class="dropdown-item btn-status" href="#" data-status="@status" data-order-id="@item.Id">@status</a>
-                                }
-                            </div>
+            <tr>
+                <td>
+                    <a class="btn btn-warning" asp-page="./Edit" asp-route-id="@item.Id" title="Merchandise return"><i class="fas fa-cookie-bite"></i></a>
+                    <a class="btn btn-default" asp-page="./Details" asp-route-id="@item.Id" title="Details"><i class="fas fa-receipt"></i></a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayLap)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChiNguoiNhan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoDienThoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentId)
+                </td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="@item.Id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @Html.DisplayFor(modelItem => item.TrangThai)
+                        </button>
+                        @{
+                            var temps = Html.GetOrderStatus(item.TrangThai);
+                            if (temps != null)
+                            {
+                                <div class="dropdown-menu" aria-labelledby="@item.Id">
+                                    @foreach (var status in Html.GetOrderStatus(item.TrangThai))
+                                    {
+                                        <a style="width:100px" class="dropdown-item btn-status" href="#" data-status="@status" data-order-id="@item.Id">@status</a>
+                                    }
+                                </div>
+                            }
                         }
-                    }
 
-                </div>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KhachHang.Email)
-            </td>
-        </tr>
+                    </div>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KhachHang.Email)
+                </td>
+            </tr>
         }
     </tbody>
 </table>

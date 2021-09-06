@@ -1022,3 +1022,4 @@ F:\_school\tttn\prjShoeStore\prjShoeStore\obj\Debug\netcoreapp3.1\prjShoeStore.c
 F:\_school\tttn\prjShoeStore\prjShoeStore\obj\Debug\netcoreapp3.1\prjShoeStore.dll
 F:\_school\tttn\prjShoeStore\prjShoeStore\obj\Debug\netcoreapp3.1\prjShoeStore.pdb
 F:\_school\tttn\prjShoeStore\prjShoeStore\obj\Debug\netcoreapp3.1\prjShoeStore.genruntimeconfig.cache
+D:\ProjectOrder\prj-intership-shoe-store-backend\prjShoeStore\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Pages\OrderReportPage\Index.cshtml.g.cs
